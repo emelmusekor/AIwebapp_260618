@@ -1,0 +1,242 @@
+.module {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.inputSection,
+.tokenSection,
+.attentionSection {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+}
+
+.sectionLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.65rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.sectionHeader .sectionLabel {
+  margin: 0;
+}
+
+.viewToggle {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.toggleBtn {
+  padding: 0.25rem 0.65rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-background);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: var(--color-text-muted);
+}
+
+.toggleBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.toggleBtn.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.inputRow {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.textInput {
+  flex: 1;
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--color-background);
+  color: var(--color-text);
+  transition: border-color 0.15s;
+}
+
+.textInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.primaryBtn {
+  padding: 0.55rem 1rem;
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.primaryBtn:hover {
+  background: #3451cc;
+}
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+}
+
+.presetBtn {
+  padding: 0.28rem 0.65rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-background);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.presetBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.tokenRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 44px;
+  align-items: center;
+}
+
+.emptyHint {
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+}
+
+.tokenChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2.5px solid transparent;
+  transition: all 0.15s;
+  color: #fff;
+  user-select: none;
+}
+
+.tokenChip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.tokenChip.selected {
+  border-color: #1a1a2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.tokenIndex {
+  font-size: 0.65rem;
+  opacity: 0.75;
+  margin-right: 3px;
+}
+
+.attentionEmpty {
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.attentionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.attentionRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.attentionLabel {
+  font-size: 0.85rem;
+  font-weight: 500;
+  min-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attentionBarWrap {
+  flex: 1;
+  height: 18px;
+  background: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.attentionBar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.attentionWeight {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  min-width: 36px;
+  text-align: right;
+}
+
+/* 매트릭스 뷰 */
+.matrixWrap {
+  overflow-x: auto;
+}
+
+.matrixHint {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.65rem;
+}
+
+@media (max-width: 768px) {
+  .inputRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

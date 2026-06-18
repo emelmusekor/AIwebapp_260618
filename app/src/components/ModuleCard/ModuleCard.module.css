@@ -1,0 +1,114 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1.5px solid var(--color-border);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover:not(.disabled) {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--card-color, var(--color-primary));
+  text-decoration: none;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.header {
+  padding: 1.2rem 1.2rem 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--card-color, var(--color-primary));
+}
+
+.icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.domain {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: var(--card-color, var(--color-primary));
+  color: #fff;
+}
+
+.level {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  background: var(--color-background);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.body {
+  padding: 1rem 1.2rem 1.2rem;
+  flex: 1;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem;
+}
+
+.question {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  font-style: italic;
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.keyword {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--color-background);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+
+.placeholder {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  font-size: 0.75rem;
+  background: #f59e0b22;
+  color: #b45309;
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 1px solid #f59e0b44;
+}

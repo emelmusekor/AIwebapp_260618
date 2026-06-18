@@ -1,0 +1,275 @@
+.module {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.workspace {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.controls {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+.controlTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
+}
+
+.controlGroup {
+  margin-bottom: 1.2rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.classToggle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.classBtn {
+  padding: 0.4rem 0.75rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-background);
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+}
+
+.classActive0 {
+  border-color: #4361ee;
+  background: rgba(67, 97, 238, 0.1);
+  color: #4361ee;
+  font-weight: 600;
+}
+
+.classActive1 {
+  border-color: #f72585;
+  background: rgba(247, 37, 133, 0.1);
+  color: #f72585;
+  font-weight: 600;
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slider {
+  flex: 1;
+  accent-color: var(--color-primary);
+}
+
+.sliderValue {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  min-width: 2.5rem;
+  text-align: right;
+}
+
+.runButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.btn {
+  padding: 0.45rem 0.75rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-background);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.15s;
+  text-align: left;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.btn.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.resetBtn {
+  color: var(--color-text-muted);
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: 0.3rem 0 0;
+}
+
+.stats {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat span {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.stat strong {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+.weightsBox {
+  margin-top: 0.75rem;
+  padding: 0.65rem;
+  background: var(--color-background);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.weightRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+}
+
+.weightRow span {
+  color: var(--color-text-muted);
+}
+
+.weightRow code {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--color-primary);
+}
+
+.visualization {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.canvas {
+  border-radius: var(--radius-md);
+  background: #f9fafb;
+  border: 1px solid var(--color-border);
+  display: block;
+  cursor: crosshair;
+  width: 100%;
+  max-width: 420px;
+}
+
+.lossChart {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lossLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lossCanvas {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.crossIcon {
+  color: #f72585;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.lineIcon {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: #1a1a2e;
+  border-radius: 1px;
+}
+
+@media (max-width: 768px) {
+  .workspace {
+    flex-direction: column;
+  }
+  .controls {
+    width: 100%;
+  }
+}
